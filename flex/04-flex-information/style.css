@@ -1,5 +1,8 @@
 body {
   font-family: 'Courier New', Courier, monospace;
+
+  /* TOP solution
+  text-align: center; */
 }
 
 img {
@@ -10,6 +13,8 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+  text-align: center;
+  margin-bottom: 32px;
 }
 
 /* do not edit this footer */
@@ -24,3 +29,26 @@ img {
   justify-content: center;
   background: #eee;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+}
+
+.fruit-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 200px;
+  text-align: center;
+
+  /* TOP solution
+  max width: 200px; */
+}
+
+/* Text-align: center property should be placed in the body selector
+   Making a container flexible removes all the white spaces between flex items
+   There is no need to put all the declaration in .fruit-container selector
+   Max-width: 200px property is enough to make the flex items wrap */
